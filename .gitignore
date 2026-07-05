@@ -1,0 +1,35 @@
+# Environment / secrets
+.env
+
+# Raw data (do not commit large/raw pulls)
+data/raw/**
+!data/raw/.gitkeep
+
+# Power BI export CSVs are regenerated from jobdatadigest.db via dashboard/export_data.py
+dashboard/data/*.csv
+
+# SQLite database
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Models (can be large; regenerate via training script)
+models/*.pkl
+models/*.joblib
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+
+# Tooling / local agent config
+.claude/
